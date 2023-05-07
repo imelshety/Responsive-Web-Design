@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --color-code: #4d4e53;
+  --background-color: #ffff;
+  --border-color: rgba(0, 22, 22, 0.4);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+p {
+  font-weight: 400;
+  color: #4d4e53;
+  padding: 5px;
+  margin-left: 20px;
+}
+
+/* Navbar section */
+#navbar {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 17%;
+  height: 100%;
+  border-right: solid;
+  border-color: var(--border-color);
+}
+header {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 1rem;
+  text-align: center;
+}
+#navbar ul {
+  height: 90%;
+  padding: 15px;
+  list-style: none;
+  overflow: auto;
+}
+#navbar li {
+  color: var(--color-code);
+  margin-top: 16px;
+  padding-top: 10px;
+  border-top: 1px solid var(--border-color);
+}
+#navbar a {
+  text-decoration: none;
+  color: var(--color-code);
+  font-size: 1.2rem;
+}
+
+/* main section  */
+#main-doc {
+  width: 82%;
+  position: absolute;
+  top: 1rem;
+  left: 17rem;
+}
+#main-doc header {
+  text-align: left;
+  margin: 2px 0px 10px 20px;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+#main-doc li {
+  margin-left: 3rem;
+  padding: 1rem;
+  color: var(--color-code);
+}
+code {
+  display: block;
+  background-color: #343434;
+  color: var(--background-color);
+  text-align: left;
+  margin: 10px;
+  padding: 15px;
+  border-radius: 5px;
+  white-space: pre-line; /* White-space : https://developer.mozilla.org/en-US/docs/Web/CSS/white-space*/
+  line-height: 2;
+}
+@media screen and (max-width: 400px) {
+  #navbar {
+    width: 20%;
+  }
+  header,
+  #navbar a,
+  #main-doc header {
+    font-size: 12px;
+  }
+  #main-doc {
+    position: relative;
+    left: 5rem;
+  }
+}
