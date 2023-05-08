@@ -1,0 +1,253 @@
+/** global element styling **/
+
+@import "https://fonts.googleapis.com/css?family=Lato:400,700";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --item-color: darkorange;
+}
+
+body {
+  background-color: #eee;
+  font-family: "Lato", sans-serif;
+}
+
+#landing-page {
+  position: relative;
+}
+
+li {
+  list-style: none;
+}
+
+.btn {
+  padding: 0 20px;
+  height: 40px;
+  font-size: 1em;
+  font-weight: 900;
+  text-transform: uppercase;
+  border: 3px black solid;
+  border-radius: 2px;
+  background: transparent;
+  cursor: pointer;
+}
+a {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+.container {
+  max-width: 1000px;
+  width: 100%;
+  margin: auto;
+}
+.item {
+  display: flex;
+}
+/* header section */
+#header {
+  width: 100%;
+  min-height: 75px;
+  position: fixed;
+  top: 0;
+  background-color: #eeeeee;
+  display: flex;
+  justify-content: space-between;
+}
+#header > .logo {
+  width: 30%;
+}
+#header > .logo > img {
+  max-width: 80%;
+}
+#header > #nav-bar {
+  width: 35vw;
+  margin: auto;
+}
+#header ul {
+  font-size: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+#header li {
+  margin-left: 10px;
+}
+/* Section hero */
+#hero {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  text-align: center;
+  padding-top: 10px;
+}
+#hero input[type="email"] {
+  max-width: 275px;
+  width: 100%;
+  padding: 5px;
+  margin-top: 12px;
+  border-radius: 10px;
+}
+#hero input[type="submit"] {
+  background-color: #f1c40f;
+  width: 100%;
+  height: 30px;
+  margin: 15px 0;
+  border: 0;
+  border-radius: 10px;
+}
+/* features section */
+#features {
+  margin-top: 2rem;
+}
+#features .icon {
+  width: 20vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--item-color);
+}
+#features .caption {
+  width: 80vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px;
+}
+#features .caption,
+#features .icon {
+  height: 125px;
+}
+/* #how-it-works section */
+#how-it-works {
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+}
+#how-it-works > iframe {
+  width: 100%;
+  max-width: 550px;
+  border-radius: 10px;
+}
+/*pricing section  */
+#pricing {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+#pricing .product {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  width: 33.33%;
+  border: 2px solid #000;
+  border-radius: 8px;
+  margin: 10px;
+}
+.product > .level {
+  width: 100%;
+  background-color: #ddd;
+  font-size: 20px;
+  font-weight: 800;
+  padding: 15px;
+}
+.product > h2 {
+  margin-top: 12px;
+}
+.product > ol {
+  margin: 20px 0;
+}
+.product > ol > li {
+  padding: 5px;
+}
+.product > button {
+  width: 50%;
+  align-self: center;
+  background-color: var(--item-color);
+  border-radius: 10px;
+  margin: 10px 0;
+}
+/* footre section */
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 80px;
+}
+footer ul {
+  display: flex;
+  justify-content: center;
+}
+footer ul li {
+  padding-left: 30px;
+}
+footer > p {
+  margin-top: 10px;
+  font-size: 10px;
+}
+@media (min-width: 300px) {
+  a,
+  li {
+    font-size: 10px;
+  }
+
+  #header > .logo {
+    width: 50%;
+    margin-top: 15px;
+  }
+  #pricing {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin-left: 5px;
+  }
+  #pricing .product {
+    width: 90%;
+  }
+}
+@media (min-width: 400px) {
+  a,
+  li {
+    font-size: 15px;
+  }
+
+  #header > .logo {
+    width: 50%;
+    margin-top: 15px;
+  }
+  #pricing {
+    flex-direction: column;
+    align-items: center;
+  }
+  #pricing .product {
+    width: 80%;
+  }
+}
+@media (min-width: 660px) {
+  #pricing {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  #pricing .product {
+    width: 40%;
+  }
+}
+@media (min-width: 960px) {
+  #pricing {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-left: 5px;
+  }
+  #pricing .product {
+    width: 30.333%;
+  }
+}
